@@ -1,3 +1,7 @@
+
+
+
+
 # Vehicle-Detection-Yolo
 The goal of this project is to detect vehicles in an image and also in an video. In this project I implemented object detection using custom yolo model build using darknet and Opencv libray for detcting the object.
 The Object detection means the detection on every single frame and frame after frame.
@@ -8,7 +12,7 @@ Yolo algorithm “only looks once” at the image in the sense that it requires 
 We will use Yolo with Darknet framework. Darknet is an open source neural network framework written in C and CUDA. It is fast, easy to install, and supports CPU and GPU computation The framework features You Only Look Once (YOLO), a state-of-the-art, real-time object detection system..
 
 The demo link for the folowing Detection performed on video is here
-[![Output Video]()](https://youtu.be/AJshZn2H-WQ)
+https://user-images.githubusercontent.com/60709999/124021170-dd295880-da08-11eb-9abd-4e3ddd2e912b.mp4
 
 
 ### Training Yolo For Custom Data:
