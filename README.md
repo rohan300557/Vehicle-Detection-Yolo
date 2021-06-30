@@ -20,7 +20,7 @@ Firstly, we need a suitable dataset to train our custom object detection model.
 *  In this project I took total of 556 images of different vehicles (Car, Ambulance, Bus and Truck).
 * Then we will Label the images using [LabelImg](https://tzutalin.github.io/labelImg/). [LabelImg](https://github.com/tzutalin/labelImg#labelimg) is a graphical image annotation tool. The Annotations are saved as TXT files in YOLO format.
 	The below image shown how the Annotation tool look like:
-	![labelimg.png](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/Labelimg.png)	
+	<img src="https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/Labelimg.png" data-canonical-src="https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/Labelimg.png" width="400" height="300" />
 	The output of the following Format is given below:
     ![format.png](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/file_format.png)
 * We will use [Darknet](https://github.com/pjreddie/darknet), an open source neural network framework to train the detector. We will  clone the the official darknet repository
