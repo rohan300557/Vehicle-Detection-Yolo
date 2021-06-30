@@ -84,7 +84,11 @@ Note: If in some case the training does not finish and get disconnected, We can 
  [file](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/creating-files-data-and-name.py) and this [file](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/creating-train-and-test-txt-files.py) for object detection in video.
 
 Below is an example of image used as input.
+
 ![input](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/test/vehicle.jpg)
+
 Now as the Image proccessed the following object in the image will be detect and the output image will be:
+
 ![output](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/output/output.jpg)
-	
+
+To see object detection video on video check this [link](https://user-images.githubusercontent.com/60709999/124021170-dd295880-da08-11eb-9abd-4e3ddd2e912b.mp4)
