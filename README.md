@@ -18,6 +18,7 @@ Firstly, we need a suitable dataset to train our custom object detection model.
 	The below image shown how the Annotation tool look like:
 	![labelimg.png](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/Labelimg.png)	
 	The output of the following Format is given below:
+	
     ![format.png](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/file_format.png)
 * We will use [Darknet](https://github.com/pjreddie/darknet), an open source neural network framework to train the detector. We will  clone the the official darknet repository
 	```python:
