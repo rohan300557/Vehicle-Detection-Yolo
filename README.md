@@ -13,6 +13,7 @@ The demo link for the folowing Detection performed on video is [here](https://us
 
 ### Training Yolo For Custom Data:
 
+
 Firstly, we need a suitable dataset to train our custom object detection model.
 *  In this project I took total of 556 images of different vehicles (Car, Ambulance, Bus and Truck).
 * Then we will Label the images using [LabelImg](https://tzutalin.github.io/labelImg/). [LabelImg](https://github.com/tzutalin/labelImg#labelimg) is a graphical image annotation tool. The Annotations are saved as TXT files in YOLO format.
@@ -39,7 +40,7 @@ Using the concept of transfer learning to train a custom model, using a basic tr
 	-   Change [filters=32] to filters=(classes + 5)x3 in the  **3**  **[convolutional]**  before each [yolo] layer, keep in mind that it only has to be the last [convolutional] before each of the [yolo] layers.
 	-   Change line classes=4 to number of objects in each of  **3 [yolo]**-layers.
 ![custom_cnf.png](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/custom_cng.png)
-* Make changes in the makefile to enable OPENCV, GPU and CUDNN: 
+* In the [notebook](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/yolo_custom.ipynb) we make changes in the makefile to enable OPENCV, GPU and CUDNN: 
 	 ```python:
 	!sed -i 's/OPENCV=0/OPENCV=1/' Makefile
 	!sed -i 's/GPU=0/GPU=1/' Makefile
@@ -81,7 +82,7 @@ Note: If in some case the training does not finish and get disconnected, We can 
 	* We will switch to testing by first uncommenting the testing lines for batch and subdivison in yolov3_custom.cfg file. And commenting the training lines.
 	* And we will use yolov3_custom_last.weights file as a weigths for detection.
 	* Now for object detection in an image we will use this
- [file](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/creating-files-data-and-name.py) and this [file](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/creating-train-and-test-txt-files.py) for object detection in video.
+ [file](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/object_detection_image.py) and this [file](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/object_detection_video.py) for object detection in video.
 
 Below is an example of image used as input.
 
