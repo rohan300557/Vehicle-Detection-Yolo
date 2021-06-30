@@ -1,6 +1,3 @@
-
-
-
 # Vehicle-Detection-Yolo
 The goal of this project is to detect vehicles in an image and also in an video. In this project I implemented object detection using custom yolo model build using darknet and Opencv libray for detcting the object.
 The Object detection means the detection on every single frame and frame after frame.
@@ -10,6 +7,10 @@ The YOLO approach of the object detection is consists of two parts: the neural n
 Yolo algorithm “only looks once” at the image in the sense that it requires only one forward propagation pass through the network to make predictions. After non-max suppression, it then outputs recognized objects together with the bounding boxes.
 We will use Yolo with Darknet framework. Darknet is an open source neural network framework written in C and CUDA. It is fast, easy to install, and supports CPU and GPU computation The framework features You Only Look Once (YOLO), a state-of-the-art, real-time object detection system..
 
+The demo link for the folowing Detection performed on video is here
+![Output Video](https://drive.google.com/file/d/13QYG4_nXkpauvgGGYonHpyf5lGtF2r8G/view?usp=sharing)
+
+
 ### Training Yolo For Custom Data:
 
 Firstly, we need a suitable dataset to train our custom object detection model.
@@ -18,13 +19,13 @@ Firstly, we need a suitable dataset to train our custom object detection model.
 	The below image shown how the Annotation tool look like:
 	![labelimg.png](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/Labelimg.png)	
 	The output of the following Format is given below:
-	
     ![format.png](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/file_format.png)
 * We will use [Darknet](https://github.com/pjreddie/darknet), an open source neural network framework to train the detector. We will  clone the the official darknet repository
 	```python:
 	!git clone https://github.com/AlexeyAB/darknet
 	```
-*  To train our object detector we can use the existing pre trained weights that are already trained on huge data sets. And we will download the pretrained weights which is previuosly trained on coco dataset from [here](https://pjreddie.com/media/files/darknet53.conv.74).
+*  To train our object detector we can use the existing pre trained weights that are already trained on huge data sets. And we will download the pretrained weights which is previuosly trained on coco dataset from [here](https://pjreddie.com/media/files/darknet53.conv.74).  
+Using the concept of transfer learning to train a custom model, using a basic trained model and use its learning to make learn a model for custom data.
 * Changes in the custom config file:
 	-   Uncomment Training and Comment Testing line of batch and subdivison. 
 	-   Change line batch to batch=64
@@ -70,6 +71,7 @@ ClickConnect()
 ```
 
 Note: If in some case the training does not finish and get disconnected, We can restart the training from where we left off. We will use the weights that were saved last. Which will be saved in backup folder. The name of the last file will be **yolov3_custom_last.weights** . backup directory is the location where newly trained weights would be saved.
+
 ### Runnning Custom Object Detector
 * We can perform detection with OpenCV DNN as it is a fast DNN implementation for CPU.
 	* We will switch to testing by first uncommenting the testing lines for batch and subdivison in yolov3_custom.cfg file. And commenting the training lines.
@@ -77,3 +79,8 @@ Note: If in some case the training does not finish and get disconnected, We can 
 	* Now for object detection in an image we will use this
  [file](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/creating-files-data-and-name.py) and this [file](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/creating-train-and-test-txt-files.py) for object detection in video.
 
+Below is an example of image used as input.
+![input](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/test/vehicle.jpg)
+Now as the Image proccessed the following object in the image will be detect and the output image will be:
+![output](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/output/output.jpg)
+	
