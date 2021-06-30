@@ -8,7 +8,7 @@ Yolo algorithm “only looks once” at the image in the sense that it requires 
 We will use Yolo with Darknet framework. Darknet is an open source neural network framework written in C and CUDA. It is fast, easy to install, and supports CPU and GPU computation The framework features You Only Look Once (YOLO), a state-of-the-art, real-time object detection system..
 
 The demo link for the folowing Detection performed on video is here
-![Output Video](https://drive.google.com/file/d/13QYG4_nXkpauvgGGYonHpyf5lGtF2r8G/view?usp=sharing)
+[![Output Video]()](https://youtu.be/AJshZn2H-WQ)
 
 
 ### Training Yolo For Custom Data:
