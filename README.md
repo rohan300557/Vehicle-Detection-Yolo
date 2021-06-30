@@ -1,7 +1,6 @@
 
 
 
-
 # Vehicle-Detection-Yolo
 The goal of this project is to detect vehicles in an image and also in an video. In this project I implemented object detection using custom yolo model build using darknet and Opencv libray for detcting the object.
 The Object detection means the detection on every single frame and frame after frame.
@@ -14,15 +13,19 @@ We will use Yolo with Darknet framework. Darknet is an open source neural networ
 The demo link for the folowing Detection performed on video is [here](https://user-images.githubusercontent.com/60709999/124021170-dd295880-da08-11eb-9abd-4e3ddd2e912b.mp4)
 
 
+
 ### Training Yolo For Custom Data:
 
 Firstly, we need a suitable dataset to train our custom object detection model.
 *  In this project I took total of 556 images of different vehicles (Car, Ambulance, Bus and Truck).
 * Then we will Label the images using [LabelImg](https://tzutalin.github.io/labelImg/). [LabelImg](https://github.com/tzutalin/labelImg#labelimg) is a graphical image annotation tool. The Annotations are saved as TXT files in YOLO format.
 	The below image shown how the Annotation tool look like:
-	<img src="https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/Labelimg.png" data-canonical-src="https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/Labelimg.png" width="400" height="300" />
+	
+	<img src="https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/Labelimg.png" data-canonical-src="https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/Labelimg.png" width="400" height="300" />	
+	
 	The output of the following Format is given below:
     ![format.png](https://github.com/rohan300557/Vehicle-Detection-Yolo/blob/main/src/file_format.png)
+
 * We will use [Darknet](https://github.com/pjreddie/darknet), an open source neural network framework to train the detector. We will  clone the the official darknet repository
 	```python:
 	!git clone https://github.com/AlexeyAB/darknet
