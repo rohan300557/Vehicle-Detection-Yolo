@@ -3,11 +3,13 @@ The goal of this project is to detect vehicles in an image and also in an video.
 The Object detection means the detection on every single frame and frame after frame.
 
 “You Only Look Once” (YOLO) is a popular algorithm for performing object detection due to its fast speed and ability to detect objects in real time.
-The YOLO approach of the object detection is consists of two parts: the neural network part that predicts a vector from an image, and the postprocessing part that interpolates the vector as boxes coordinates and class probabilities.
+Object Detection using YOLO is basically done in 2 parts: <br>
+1) A neural network that predicts a vector from an image.<br>
+2) In this posprocessing step, vectors generated in previous step are interpolated as boxes coordinates and class probabilities.
 
-Yolo algorithm “only looks once” at the image in the sense that it requires only one forward propagation pass through the network to make predictions. After non-max suppression, it then outputs recognized objects together with the bounding boxes.
+Yolo algorithm “only looks once” at the image, in the sense that it requires only one forward propagation pass through the network to make the prediction. After applying a  non-max suppression, it outputs recognized objects together with the bounding boxes.
 
-We will use Yolo with Darknet framework. Darknet is an open source neural network framework written in C and CUDA. It is fast, easy to install, and supports CPU and GPU computation The framework features You Only Look Once (YOLO), a state-of-the-art, real-time object detection system..
+Yolo is used with Darknet framework. Darknet is an open source neural network framework written in C and CUDA. The benfits of using YOLO is that it is fast, easy to install, and supports CPU and GPU computation The framework features You Only Look Once (YOLO), a state-of-the-art, real-time object detection system..
 
 The demo link for the folowing Detection performed on video is [here](https://user-images.githubusercontent.com/60709999/124021170-dd295880-da08-11eb-9abd-4e3ddd2e912b.mp4) , [here](https://drive.google.com/file/d/1wclnOC6u-eCkIiXwmsY7_mxSpN8kFjuP/view?usp=sharing).
 
@@ -17,7 +19,7 @@ The demo link for the folowing Detection performed on video is [here](https://us
 
 
 Firstly, we need a suitable dataset to train our custom object detection model.
-*  In this project I took total of 556 images of different vehicles (Car, Ambulance, Bus and Truck).
+*  In this project a total of 556 images of different vehicles(Car, Ambulance, Bus and Truck) were used.
 * Then we will Label the images using [LabelImg](https://tzutalin.github.io/labelImg/). [LabelImg](https://github.com/tzutalin/labelImg#labelimg) is a graphical image annotation tool. The Annotations are saved as TXT files in YOLO format.
 	The below image shown how the Annotation tool look like:
 	
@@ -77,7 +79,7 @@ setInterval(ClickConnect,60000)
 ClickConnect()
 ```
 
-Note: If in some case the training does not finish and get disconnected, We can restart the training from where we left off. We will use the weights that were saved last. Which will be saved in backup folder. The name of the last file will be **yolov3_custom_last.weights** . backup directory is the location where newly trained weights would be saved.
+Note: If in some case the training does not finish and get disconnected, the training can be reinstated from the point it got disconnected. The weights that were saved last before the connection was terminated can be used, which will be saved in backup folder. The name of the last file will be **yolov3_custom_last.weights** . Backup directory is the location where newly trained weights would be saved.
 
 ### Runnning Custom Object Detector
 * We can perform detection with OpenCV DNN as it is a fast DNN implementation for CPU.
