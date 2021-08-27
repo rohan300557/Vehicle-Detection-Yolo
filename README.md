@@ -1,5 +1,5 @@
 # Vehicle-Detection-Yolo
-The goal of this project is to detect vehicles in an image and also in an video. In this project I implemented object detection using custom yolo model build using darknet and Opencv libray for detcting the object.
+The goal of this project is to detect vehicles in an image and also in an video. In this project I implemented object detection using custom yolo model build using darknet and Opencv library for detecting the object.
 The Object detection means the detection on every single frame and frame after frame.
 
 “You Only Look Once” (YOLO) is a popular algorithm for performing object detection due to its fast speed and ability to detect objects in real time.
